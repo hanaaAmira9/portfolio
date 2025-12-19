@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
+        email: '',
         message: ''
     });
 
@@ -14,7 +15,7 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const subject = encodeURIComponent(`Contact Portfolio de ${formData.name}`);
-        const body = encodeURIComponent(formData.message);
+        const body = encodeURIComponent(`Nom: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
         window.location.href = `mailto:hanaaamira9@gmail.com?subject=${subject}&body=${body}`;
     };
 
@@ -45,6 +46,29 @@ const Contact = () => {
                             name="name"
                             required
                             value={formData.name}
+                            onChange={handleChange}
+                            style={{
+                                width: '100%',
+                                padding: '1rem',
+                                background: 'rgba(255,255,255,0.05)',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                borderRadius: 'var(--radius-sm)',
+                                color: 'var(--text-primary)',
+                                outline: 'none',
+                                transition: 'border 0.3s'
+                            }}
+                            onFocus={(e) => e.target.style.border = '1px solid var(--accent-primary)'}
+                            onBlur={(e) => e.target.style.border = '1px solid rgba(255,255,255,0.1)'}
+                        />
+                    </div>
+
+                    <div>
+                        <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-secondary)' }}>Votre Email</label>
+                        <input
+                            type="email"
+                            name="email"
+                            required
+                            value={formData.email}
                             onChange={handleChange}
                             style={{
                                 width: '100%',
