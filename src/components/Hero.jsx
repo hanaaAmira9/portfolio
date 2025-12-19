@@ -66,7 +66,7 @@ const Hero = () => {
                         WebkitTextFillColor: 'transparent',
                     }}
                 >
-                    Hanaa Amira Taha.
+                    Taha Hanaa Amira
                 </motion.h1>
 
                 <motion.h2

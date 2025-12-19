@@ -1,6 +1,23 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const subject = encodeURIComponent(`Contact Portfolio de ${formData.name}`);
+        const body = encodeURIComponent(formData.message);
+        window.location.href = `mailto:hanaaamira9@gmail.com?subject=${subject}&body=${body}`;
+    };
+
     return (
         <section id="contact" style={{
             padding: '8rem 2rem',
@@ -16,34 +33,82 @@ const Contact = () => {
                 <p style={{ color: 'var(--accent-primary)', fontFamily: 'var(--font-mono)', marginBottom: '1rem' }}>
                     04. La suite ?
                 </p>
-                <h2 style={{ fontSize: '3rem', fontWeight: '700', marginBottom: '1.5rem' }}>
+                <h2 style={{ fontSize: '3rem', fontWeight: '700', marginBottom: '2rem' }}>
                     Contactez-moi
                 </h2>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', marginBottom: '3rem' }}>
-                    Je suis actuellement à l'écoute de nouvelles opportunités. Mon e-mail est toujours ouvert, que ce soit pour une question ou juste pour dire bonjour, je ferai de mon mieux pour vous répondre !
-                </p>
 
-                <motion.a
-                    href="mailto:hanaaamira9@gmail.com"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    style={{
-                        display: 'inline-block',
-                        padding: '1.2rem 3rem',
-                        border: '1px solid var(--accent-primary)',
-                        borderRadius: 'var(--radius-sm)',
-                        color: 'var(--accent-primary)',
-                        fontSize: '1rem',
-                        fontWeight: '600',
-                        background: 'transparent',
-                        cursor: 'pointer',
-                        transition: 'background 0.3s ease'
-                    }}
-                    onMouseEnter={(e) => e.target.style.background = 'rgba(0, 255, 157, 0.1)'}
-                    onMouseLeave={(e) => e.target.style.background = 'transparent'}
-                >
-                    Envoyer un message
-                </motion.a>
+                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', textAlign: 'left' }}>
+                    <div>
+                        <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-secondary)' }}>Votre Nom</label>
+                        <input
+                            type="text"
+                            name="name"
+                            required
+                            value={formData.name}
+                            onChange={handleChange}
+                            style={{
+                                width: '100%',
+                                padding: '1rem',
+                                background: 'rgba(255,255,255,0.05)',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                borderRadius: 'var(--radius-sm)',
+                                color: 'var(--text-primary)',
+                                outline: 'none',
+                                transition: 'border 0.3s'
+                            }}
+                            onFocus={(e) => e.target.style.border = '1px solid var(--accent-primary)'}
+                            onBlur={(e) => e.target.style.border = '1px solid rgba(255,255,255,0.1)'}
+                        />
+                    </div>
+
+                    <div>
+                        <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-secondary)' }}>Votre Message</label>
+                        <textarea
+                            name="message"
+                            required
+                            rows="5"
+                            value={formData.message}
+                            onChange={handleChange}
+                            style={{
+                                width: '100%',
+                                padding: '1rem',
+                                background: 'rgba(255,255,255,0.05)',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                borderRadius: 'var(--radius-sm)',
+                                color: 'var(--text-primary)',
+                                outline: 'none',
+                                fontFamily: 'inherit',
+                                resize: 'vertical',
+                                transition: 'border 0.3s'
+                            }}
+                            onFocus={(e) => e.target.style.border = '1px solid var(--accent-primary)'}
+                            onBlur={(e) => e.target.style.border = '1px solid rgba(255,255,255,0.1)'}
+                        />
+                    </div>
+
+                    <motion.button
+                        type="submit"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        style={{
+                            marginTop: '1rem',
+                            padding: '1.2rem',
+                            background: 'transparent',
+                            border: '1px solid var(--accent-primary)',
+                            borderRadius: 'var(--radius-sm)',
+                            color: 'var(--accent-primary)',
+                            fontSize: '1rem',
+                            fontWeight: '600',
+                            cursor: 'pointer',
+                            transition: 'background 0.3s ease'
+                        }}
+                        onMouseEnter={(e) => e.target.style.background = 'rgba(0, 255, 157, 0.1)'}
+                        onMouseLeave={(e) => e.target.style.background = 'transparent'}
+                    >
+                        Envoyer le message
+                    </motion.button>
+                </form>
+
             </motion.div>
         </section>
     );

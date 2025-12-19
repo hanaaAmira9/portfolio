@@ -11,7 +11,7 @@ const About = () => {
                 transition={{ duration: 0.5 }}
                 style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}
             >
-                {/* Text Content */}
+
                 <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
                         <h2 style={{ fontSize: '2rem', fontWeight: '700', color: 'var(--text-primary)' }}>À propos de moi</h2>
@@ -51,7 +51,7 @@ const About = () => {
                     </ul>
                 </div>
 
-                {/* Image Placeholder */}
+
                 <div style={{ position: 'relative', maxWidth: '400px', margin: '0 auto' }}>
                     <div style={{
                         position: 'absolute',

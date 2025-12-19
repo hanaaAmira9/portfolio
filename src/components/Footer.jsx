@@ -15,7 +15,7 @@ const Footer = () => {
                 <a href="mailto:hanaaamira9@gmail.com" style={{ transition: 'color 0.3s' }} className="social-link"><Mail size={20} /></a>
             </div>
             <p>
-                Conçu & Développé par Hanaa Amira Taha.
+                Conçu & Développé par Taha Hanaa Amira
             </p>
 
             <style>{`
