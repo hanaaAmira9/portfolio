@@ -9,8 +9,8 @@ const projects = [
         links: { github: "https://github.com/hanaaAmira9", external: "#" }
     },
     {
-        title: "Jeu Snake (Snake Game)",
-        desc: "Clone du jeu classique Snake avec une interface graphique moderne.",
+        title: "Compilateur SNAKE",
+        desc: "Conception et implémentation d’un compilateur pour le langage SNAKE. Le projet inclut l’analyse lexicale et syntaxique, la validation des instructions, la gestion des erreurs et la traduction du code source vers une représentation exécutable.",
         tech: ["Python", "PyQt6", "OOP"],
         links: { github: "https://github.com/hanaaAmira9", external: "#" }
     },
