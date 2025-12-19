@@ -3,28 +3,28 @@ import { ExternalLink, Github, Folder } from 'lucide-react';
 
 const projects = [
     {
-        title: "E-Commerce Dashboard",
-        desc: "A comprehensive dashboard for managing data, visualizing stats, and tracking orders. Built with React and Recharts.",
-        tech: ["React", "Express", "MongoDB", "Recharts"],
-        links: { github: "#", external: "#" }
+        title: "File Integrity Monitoring (FIM)",
+        desc: "Application desktop de surveillance de l'intégrité des fichiers système. Détecte les modifications non autorisées en temps réel.",
+        tech: ["Python", "Hashing", "Windows API"],
+        links: { github: "https://github.com/hanaaAmira9", external: "#" }
     },
     {
-        title: "AI Chat Application",
-        desc: "Real-time chat application with AI integration for smart replies and translations.",
-        tech: ["Next.js", "OpenAI API", "Socket.io", "Tailwind"],
-        links: { github: "#", external: "#" }
+        title: "Jeu Snake (Snake Game)",
+        desc: "Clone du jeu classique Snake avec une interface graphique moderne.",
+        tech: ["Python", "PyQt6", "OOP"],
+        links: { github: "https://github.com/hanaaAmira9", external: "#" }
     },
     {
-        title: "Task Management Tool",
-        desc: "Collaborative task manager with drag-and-drop functionality and team workspaces.",
-        tech: ["Vue.js", "Firebase", "Pinia", "Sass"],
-        links: { github: "#", external: "#" }
+        title: "E-Commerce Simple",
+        desc: "Site e-commerce complet avec panier, gestion produits et checkout.",
+        tech: ["React", "HTML/CSS", "JavaScript"],
+        links: { github: "https://github.com/hanaaAmira9", external: "#" }
     },
     {
-        title: "Crypto Portfolio Tracker",
-        desc: "Track cryptocurrency prices in real-time with detailed charts and alerts.",
-        tech: ["React Native", "CoinGecko API", "Redux"],
-        links: { github: "#", external: "#" }
+        title: "Mon Portfolio",
+        desc: "Site personnel pour présenter mes compétences et projets (celui-ci !).",
+        tech: ["React", "Vite", "Framer Motion"],
+        links: { github: "https://github.com/hanaaAmira9", external: "#" }
     }
 ];
 
@@ -38,7 +38,7 @@ const Projects = () => {
                 style={{ marginBottom: '4rem' }}
             >
                 <h2 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <span style={{ color: 'var(--accent-primary)' }}>03.</span> Some Things I've Built
+                    <span style={{ color: 'var(--accent-primary)' }}>03.</span> Quelques Projets
                     <span style={{ height: '1px', background: 'var(--text-secondary)', flex: 1, maxWidth: '300px', opacity: 0.3 }}></span>
                 </h2>
             </motion.div>
@@ -67,7 +67,7 @@ const Projects = () => {
                         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', alignItems: 'center' }}>
                             <Folder size={40} color="var(--accent-primary)" />
                             <div style={{ display: 'flex', gap: '1rem' }}>
-                                <a href={project.links.github} style={{ color: 'var(--text-secondary)' }}><Github size={20} /></a>
+                                <a href={project.links.github} target="_blank" style={{ color: 'var(--text-secondary)' }}><Github size={20} /></a>
                                 <a href={project.links.external} style={{ color: 'var(--text-secondary)' }}><ExternalLink size={20} /></a>
                             </div>
                         </div>

@@ -15,10 +15,10 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Home', href: '#home' },
-        { name: 'About', href: '#about' },
-        { name: 'Skills', href: '#skills' },
-        { name: 'Projects', href: '#projects' },
+        { name: 'Accueil', href: '#home' },
+        { name: 'À propos', href: '#about' },
+        { name: 'Compétences', href: '#skills' },
+        { name: 'Projets', href: '#projects' },
         { name: 'Contact', href: '#contact' },
     ];
 
@@ -27,7 +27,7 @@ const Navbar = () => {
         top: 0,
         left: 0,
         right: 0,
-        zIndex: 50, // High z-index to stay on top
+        zIndex: 50,
         padding: '1rem 2rem',
         transition: 'all 0.3s ease',
         background: scrolled ? 'rgba(5, 5, 5, 0.8)' : 'transparent',
@@ -62,24 +62,12 @@ const Navbar = () => {
         cursor: 'pointer',
     };
 
-    // Mobile Menu Styles
-    const mobileMenuButtonStyles = {
-        display: 'none', // Hidden on desktop by default, handled by media query usually or JS check. 
-        // Since we are doing inline styles for simplicity in this artifact, we'll need a media query or window width check.
-        // Ideally we use CSS modules or styled-components, but here we can just hide it and show via CSS class if we had one.
-        // For pure inline in React, we need conditional rendering or window size hook. 
-        // BUT simplest is to use a CSS class for responsive hiding/showing if we can.
-        // I will use a simple "mobile-hidden" class defined in index.css if I could, but to keep it self contained:
-        cursor: 'pointer',
-        color: 'var(--text-primary)',
-    };
-
     return (
         <>
             <nav style={navbarStyles}>
                 <div style={logoStyles} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     <Code2 size={24} />
-                    <span>DevPortfolio</span>
+                    <span>HanaaPortfolio</span>
                 </div>
 
                 {/* Desktop Menu */}

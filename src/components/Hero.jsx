@@ -49,7 +49,7 @@ const Hero = () => {
                         marginBottom: '1rem'
                     }}
                 >
-                    HI THERE, I'M
+                    BONJOUR, JE SUIS
                 </motion.p>
 
                 <motion.h1
@@ -66,7 +66,7 @@ const Hero = () => {
                         WebkitTextFillColor: 'transparent',
                     }}
                 >
-                    Hanaa Developer.
+                    Hanaa Amira Taha.
                 </motion.h1>
 
                 <motion.h2
@@ -80,7 +80,7 @@ const Hero = () => {
                         marginBottom: '2rem'
                     }}
                 >
-                    I build things for the web.
+                    Développeuse Web & Sécurité.
                 </motion.h2>
 
                 <motion.p
@@ -94,7 +94,7 @@ const Hero = () => {
                         marginBottom: '3rem'
                     }}
                 >
-                    I'm a Full Stack Developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products.
+                    Je suis une développeuse passionnée par le web et les applications desktop (Python), et étudiante en sécurité informatique. Je maîtrise également l'administration réseau.
                 </motion.p>
 
                 <motion.div
@@ -121,17 +121,17 @@ const Hero = () => {
                             e.target.style.background = 'transparent';
                         }}
                     >
-                        Check out my work <ArrowRight size={18} />
+                        Voir mes projets <ArrowRight size={18} />
                     </a>
 
                     <div style={{ display: 'flex', gap: '1.5rem' }}>
-                        <motion.a href="#" whileHover={{ y: -3, color: 'var(--accent-primary)' }} style={{ color: 'var(--text-secondary)' }}>
+                        <motion.a href="https://github.com/hanaaAmira9" target="_blank" whileHover={{ y: -3, color: 'var(--accent-primary)' }} style={{ color: 'var(--text-secondary)' }}>
                             <Github size={24} />
                         </motion.a>
                         <motion.a href="#" whileHover={{ y: -3, color: 'var(--accent-primary)' }} style={{ color: 'var(--text-secondary)' }}>
                             <Linkedin size={24} />
                         </motion.a>
-                        <motion.a href="#" whileHover={{ y: -3, color: 'var(--accent-primary)' }} style={{ color: 'var(--text-secondary)' }}>
+                        <motion.a href="mailto:hanaaamira9@gmail.com" whileHover={{ y: -3, color: 'var(--accent-primary)' }} style={{ color: 'var(--text-secondary)' }}>
                             <Mail size={24} />
                         </motion.a>
                     </div>

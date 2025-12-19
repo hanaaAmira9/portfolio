@@ -1,30 +1,30 @@
 import { motion } from 'framer-motion';
-import { Code2, Database, Layout, Smartphone, Terminal, Cpu } from 'lucide-react';
+import { Code2, Database, Layout, Smartphone, Terminal, Shield } from 'lucide-react';
 
 const skillsData = [
     {
-        category: "Frontend Development",
+        category: "Développement Web",
         icon: <Layout size={32} />,
-        desc: "Building responsive, accessible web interfaces",
-        techs: ["React", "HTML5", "CSS3", "Framer Motion", "Tailwind"]
+        desc: "Création d'interfaces et sites web dynamiques.",
+        techs: ["React", "HTML5", "CSS3", "JavaScript"]
     },
     {
-        category: "Backend Development",
-        icon: <Database size={32} />,
-        desc: "Creating robust APIs and server-side logic",
-        techs: ["Node.js", "Express", "Python", "SQL", "MongoDB"]
+        category: "Programmation Logicielle",
+        icon: <Code2 size={32} />,
+        desc: "Développement d'applications desktop et algorithmes.",
+        techs: ["Python", "Java", "C", "PyQt6"]
     },
     {
-        category: "Mobile App Dev",
-        icon: <Smartphone size={32} />,
-        desc: "Developing cross-platform mobile applications",
-        techs: ["React Native", "Flutter", "iOS", "Android"]
+        category: "Réseaux & Sécurité",
+        icon: <Shield size={32} />,
+        desc: "Administration réseau et surveillance de sécurité.",
+        techs: ["Administration Réseau", "Sécurité Info", "Monitoring (FIM)"]
     },
     {
-        category: "DevOps & Tools",
+        category: "Outils & Autres",
         icon: <Terminal size={32} />,
-        desc: "Streamlining deployment and development workflows",
-        techs: ["Git", "Docker", "AWS", "CI/CD", "Linux"]
+        desc: "Outils de développement et gestion de version.",
+        techs: ["Git", "GitHub", "Linux", "VS Code"]
     }
 ];
 
@@ -32,7 +32,7 @@ const Skills = () => {
     return (
         <section id="skills" style={{
             padding: '6rem 2rem',
-            background: 'var(--bg-secondary)' // Subtle bg shift
+            background: 'var(--bg-secondary)'
         }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                 <motion.div
@@ -42,10 +42,10 @@ const Skills = () => {
                     style={{ textAlign: 'center', marginBottom: '4rem' }}
                 >
                     <h2 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem' }}>
-                        <span style={{ color: 'var(--accent-primary)' }}>02.</span> My Skills
+                        <span style={{ color: 'var(--accent-primary)' }}>02.</span> Mes Compétences
                     </h2>
                     <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-                        A look at the languages and tools I use to bring ideas to life.
+                        Un aperçu de mes domaines d'expertise techniques.
                     </p>
                 </motion.div>
 

@@ -13,23 +13,20 @@ const About = () => {
                 {/* Text Content */}
                 <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
-                        <h2 style={{ fontSize: '2rem', fontWeight: '700', color: 'var(--text-primary)' }}>About Me</h2>
+                        <h2 style={{ fontSize: '2rem', fontWeight: '700', color: 'var(--text-primary)' }}>À propos de moi</h2>
                         <div style={{ height: '1px', background: 'var(--text-secondary)', flex: 1, maxWidth: '200px', opacity: 0.3 }} />
                     </div>
 
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>
-                        Hello! My name is Hanaa and I enjoy creating things that live on the internet. My interest in web development started back in 2022 when I decided to try editing custom Tumblr themes — turns out hacking together HTML & CSS was pretty fun!
-                    </p><picture>
-                        <source media="(min-width: )" srcset="" />
-                        <img src="" alt="" />
-                    </picture>
+                        Bonjour ! Je m'appelle Hanaa Amira Taha. Je suis une développeuse polyvalente et étudiante en sécurité informatique.
+                    </p>
 
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>
-                        Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences.
+                        Mon parcours combine le développement logiciel (Web & Desktop) et l'administration réseau. Je suis passionnée par la création d'outils sécurisés et performants, que ce soit des applications de surveillance d'intégrité de fichiers ou des plateformes e-commerce.
                     </p>
 
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '1.1rem' }}>
-                        Here are a few technologies I've been working with recently:
+                        Voici quelques technologies avec lesquelles je travaille :
                     </p>
 
                     <ul style={{
@@ -38,7 +35,7 @@ const About = () => {
                         gap: '0.5rem',
                         padding: 0
                     }}>
-                        {['JavaScript (ES6+)', 'React', 'Node.js', 'Python', 'TypeScript', 'Framer Motion'].map((tech) => (
+                        {['Python', 'Java', 'C', 'React', 'HTML / CSS', 'Réseaux & Sécurité'].map((tech) => (
                             <li key={tech} style={{
                                 color: 'var(--text-secondary)',
                                 display: 'flex',
@@ -84,11 +81,10 @@ const About = () => {
                             e.currentTarget.style.filter = 'grayscale(100%)';
                         }}
                     >
-                        <img
-                            src="https://via.placeholder.com/400x500/222/fff?text=Profile"
-                            alt="Profile"
-                            style={{ width: '100%', height: 'auto', display: 'block' }}
-                        />
+                        {/* Placeholder image, user can replace with real photo */}
+                        <div style={{ width: '100%', height: '400px', background: '#222', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#555' }}>
+                            PHOTO DE PROFIL
+                        </div>
                     </div>
                 </div>
             </motion.div>

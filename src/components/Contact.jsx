@@ -14,17 +14,17 @@ const Contact = () => {
                 viewport={{ once: true }}
             >
                 <p style={{ color: 'var(--accent-primary)', fontFamily: 'var(--font-mono)', marginBottom: '1rem' }}>
-                    04. What's Next?
+                    04. La suite ?
                 </p>
                 <h2 style={{ fontSize: '3rem', fontWeight: '700', marginBottom: '1.5rem' }}>
-                    Get In Touch
+                    Contactez-moi
                 </h2>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', marginBottom: '3rem' }}>
-                    I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                    Je suis actuellement à l'écoute de nouvelles opportunités. Mon e-mail est toujours ouvert, que ce soit pour une question ou juste pour dire bonjour, je ferai de mon mieux pour vous répondre !
                 </p>
 
                 <motion.a
-                    href="mailto:example@email.com"
+                    href="mailto:hanaaamira9@gmail.com"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     style={{
@@ -42,7 +42,7 @@ const Contact = () => {
                     onMouseEnter={(e) => e.target.style.background = 'rgba(0, 255, 157, 0.1)'}
                     onMouseLeave={(e) => e.target.style.background = 'transparent'}
                 >
-                    Say Hello
+                    Envoyer un message
                 </motion.a>
             </motion.div>
         </section>
