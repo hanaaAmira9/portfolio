@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import profileImg from "../assets/phtoProfil.jpeg";
 
 const About = () => {
     return (
@@ -81,10 +82,15 @@ const About = () => {
                             e.currentTarget.style.filter = 'grayscale(100%)';
                         }}
                     >
-                        {/* Placeholder image, user can replace with real photo */}
-                        <div style={{ width: '100%', height: '400px', background: '#222', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#555' }}>
-                            PHOTO DE PROFIL
-                        </div>
+                        <img
+                            src={profileImg}
+                            alt="Photo de profil"
+                            style={{
+                                width: '100%',
+                                height: '400px',
+                                objectFit: 'cover'
+                            }}
+                        />
                     </div>
                 </div>
             </motion.div>
